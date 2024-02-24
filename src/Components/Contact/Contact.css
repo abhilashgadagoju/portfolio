@@ -1,0 +1,32 @@
+.highlight-on-focus:focus {
+  border-color: rgba(0, 0, 0, 0.5); /* Change the border color to black when focused */
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5); /* Add a black box shadow when focused */
+}
+
+.contact-description {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}

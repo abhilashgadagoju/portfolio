@@ -1,0 +1,58 @@
+.my-link {
+  color: inherit; /* or specify your desired color */
+  text-decoration: none; /* remove underline if needed */
+}
+
+.my-link:hover {
+  /* Add hover effect styles if desired */
+}
+
+.home-section {
+  background-color: #f0f0f0;
+  width: 100%;
+  padding: 105px 50px 105px 50px;
+}
+
+@media (max-width: 256px) {
+  .home-section {
+    width: 100%;
+  }
+}
+
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden; /* Hide any content that overflows the container */
+  word-wrap: break-word; /* Break long words and prevent them from overflowing */
+  white-space: normal; /* Allow text to wrap onto multiple lines */
+}
+
+.typing-text {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+}
+
+.profile-image img {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  margin: 20px 20px 20px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.profile-info p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.profile-info h6 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,19 @@
+.skills-section {
+  padding: 20px 40px 20px 40px;
+    text-align: left;
+  }
+  
+  .highlight {
+    display: inline;
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 10px 10px 0;/* Adjust spacing between items */
+  }
+  
+  .highlight:last-child {
+    margin-right: 0; /* Remove margin for the last item */
+  }
+
+  

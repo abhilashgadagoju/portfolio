@@ -1,0 +1,22 @@
+.experience-section {
+  padding: 20px 40px 20px 40px;
+    text-align: left;
+  }
+.title {
+    font-size: 24px; /* Adjust the font size for the title */
+    font-weight: bold; /* Optionally, you can make it bold */
+}
+  .role {
+    font-size: 17px; /* Adjust the font size for the role */
+    font-weight: bold; /* Optionally, you can make it bold */
+  }
+  
+  .company {
+    font-size: 16px; /* Adjust the font size for the company */
+  }
+  
+  .dates {
+    font-size: 14px; /* Adjust the font size for the dates */
+  }
+  
+  

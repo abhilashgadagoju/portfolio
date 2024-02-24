@@ -1,0 +1,63 @@
+/* About.css */
+.about-section {
+    padding: 40px;
+    
+  }
+
+  .me {
+    color: #457032; /* Change the color of 'ME' */
+    font-weight: bold;
+}
+
+  
+  .text-enter-from-right {
+    animation: enterFromRight 1s ease forwards;
+    visibility: hidden;
+  }
+
+  @keyframes enterFromRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  
+  
+  .angled-section {
+    position: relative;
+    overflow: hidden;
+    background-color: #f04e23; /* Set background color */
+  }
+  
+  .angled-content {
+    position: relative;
+    z-index: 1; /* Ensure content is above background shape */
+    padding: 50px;
+    color: #ffffff; /* Set text color */
+  }
+  
+  .angled-section:before {
+    content: '';
+    position: absolute;
+    top: -100%; /* Adjust to control the angle */
+    left: -50%; /* Adjust to control the angle */
+    width: 200%; /* Adjust to control the angle */
+    height: 200%; /* Adjust to control the angle */
+    background-color: #252525; /* Set background color */
+    transform-origin: top left;
+    transform: rotate(-5deg); /* Adjust to control the angle */
+  }
+
+
+
+
+
+  .title {
+    font-size: 24px; /* Adjust the font size for the title */
+    font-weight: bold; /* Optionally, you can make it bold */
+}
+
+  
