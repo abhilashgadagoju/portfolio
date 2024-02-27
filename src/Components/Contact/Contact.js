@@ -1,32 +1,73 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useMemo } from 'react';
 import { Card, Form, Button } from 'react-bootstrap';
 import './Contact.css';
-import axios from 'axios';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
 
-  const handleMessageChange = (e) => {
-    setMessage(e.target.value);
-  };
+  const form = useRef();
+
+  let canCallMethod = true;
+
+
+  const sendEmail = () => {
+    if (!canCallMethod) {
+      console.log('Method is currently restricted.');
+      return;
+    }
+
+    // Set the flag to prevent further calls
+    canCallMethod = false;
+
+    emailjs
+      .sendForm("service_o7hf1k3", "template_62ynwy4", form.current, {
+        publicKey: 'jJ3rLmZQiYrn1rKyG',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+
+    // Allow the method to be called again after one hour
+    setTimeout(() => {
+      canCallMethod = true;
+      console.log('Method can be called again.');
+    }, 3600000); // 3600000 milliseconds = 1 hour
+
+
+
+  }
+
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    axios.post('http://your-backend-api.com/send-email', { email, message })
-      .then(response => {
-        console.log('Email sent successfully:', response.data);
-        // Reset form fields after successful submission
-        setEmail('');
-        setMessage('');
-      })
-      .catch(error => {
-        console.error('Error sending email:', error);
-      });
+
+    e.preventDefault(); // Prevent the default form submission behavior
+
+    const formData = {
+      name: form.current.recruiter_name.value,
+      email: form.current.recruiter_email.value,
+      phone: form.current.recruiter_phone.value,
+      message: form.current.message.value
+    };
+
+    if (formData.name == '') {
+      console.log('name...');
+    } else if (formData.message == '') {
+      console.log('message...');
+    } else if (formData.phone == '') {
+      console.log('phone...');
+    } else if (formData.email == '') {
+      console.log('email...');
+    } else {
+      sendEmail(form);
+    }
+
+
   };
 
   return (
@@ -40,24 +81,24 @@ function Contact() {
             <Card.Text>Enter your information and we'll get back to you.</Card.Text>
           </Card.Header>
           <Card.Body>
-            <Form>
+            <Form ref={form}>
               <Form.Group className="mb-3">
-                <Form.Label htmlFor="first-name">First name</Form.Label>
-                <Form.Control id="first-name" type="text" placeholder="Enter your first name" className="highlight-on-focus" />
+                <Form.Label htmlFor="first-name">Full Name</Form.Label>
+                <Form.Control id="first-name" type="text" name="recruiter_name" placeholder="Enter your Full Name" className="highlight-on-focus" required />
               </Form.Group>
               <Form.Group className="mb-3">
-                <Form.Label htmlFor="last-name">Last name</Form.Label>
-                <Form.Control id="last-name" type="text" placeholder="Enter your last name" className="highlight-on-focus" />
+                <Form.Label htmlFor="last-name">Phone number</Form.Label>
+                <Form.Control id="last-name" name="recruiter_phone" type="tel" pattern="\d{3}-\d{3}-\d{4}" placeholder="Enter your Phone number" className="highlight-on-focus" required />
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label htmlFor="email">Email</Form.Label>
-                <Form.Control id="email" type="email" placeholder="Enter your email" className="highlight-on-focus" />
+                <Form.Control id="email" type="email" name="recruiter_email" placeholder="Enter your email" className="highlight-on-focus" required />
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label htmlFor="message">Message</Form.Label>
-                <Form.Control as="textarea" id="message" rows={3} placeholder="Enter your message" className="highlight-on-focus" />
+                <Form.Control as="textarea" id="message" name="message" rows={3} placeholder="Enter your message" className="highlight-on-focus" required />
               </Form.Group>
-              <Button bg="dark" variant="dark" type="submit">
+              <Button bg="dark" variant="dark" type="submit" onClick={handleSubmit}>
                 Submit
               </Button>
             </Form>

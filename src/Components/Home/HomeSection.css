@@ -1,6 +1,8 @@
 .my-link {
-  color: inherit; /* or specify your desired color */
-  text-decoration: none; /* remove underline if needed */
+  color: inherit;
+  /* or specify your desired color */
+  text-decoration: none;
+  /* remove underline if needed */
 }
 
 .my-link:hover {
@@ -24,9 +26,12 @@
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
-  overflow: hidden; /* Hide any content that overflows the container */
-  word-wrap: break-word; /* Break long words and prevent them from overflowing */
-  white-space: normal; /* Allow text to wrap onto multiple lines */
+  overflow: hidden;
+  /* Hide any content that overflows the container */
+  word-wrap: break-word;
+  /* Break long words and prevent them from overflowing */
+  white-space: normal;
+  /* Allow text to wrap onto multiple lines */
 }
 
 .typing-text {
@@ -43,6 +48,14 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+@media screen and (max-width: 760px) {
+  .profile-image img {
+    width: 60vw;
+    /* 80% of the viewport width */
+    height: auto;
+    /* Auto-adjust height to maintain aspect ratio */
+  }
+}
 
 
 .profile-info p {

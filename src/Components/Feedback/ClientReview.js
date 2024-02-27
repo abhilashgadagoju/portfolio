@@ -24,7 +24,6 @@ function ClientReview({ username, name, image, date, clientComment, likes, views
     const toggleComment = () => {
         setComment(!comment);
     };
-    console.log(username, name, image, date, clientComment);
 
     return (
         <>
@@ -41,12 +40,11 @@ function ClientReview({ username, name, image, date, clientComment, likes, views
                         <p style={{ marginTop: '10px', fontWeight: 'bold' }}>Views:
                             <span style={{ color: 'gray', fontWeight: 'normal', marginLeft: '5px', marginBottom: '0', fontWeight: '500' }}>{views}</span>
                         </p>
-                        <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
 
 
                             <div onClick={toggleLike} style={{ marginRight: '15px', display: 'flex', alignItems: 'center', marginRight: '15px' }}>
                                 {liked ? <FcLike size={28} /> : <FiHeart size={28} />}
-                                <p style={{ color: 'gray', marginLeft: '5px', marginTop: '10px', fontWeight: '500' }}>{likes}</p>
                             </div>
                             <div onClick={toggleSave} style={{ marginRight: '15px' }}>
                                 {saved ? <FaBookmark size={28} /> : <FaRegBookmark size={28} />}

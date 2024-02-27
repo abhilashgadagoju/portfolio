@@ -1,9 +1,11 @@
 .scroller {
-  max-width: 1000px; /* Default maximum width */
+  max-width: 1000px;
+  /* Default maximum width */
 
   /* Adjust the maximum width for smaller screen sizes */
   @media (max-width: 768px) {
-    max-width: 500px; /* Example: 300px for screens up to 768px wide */
+    max-width: 70vw;
+    /* Example: 300px for screens up to 768px wide */
   }
 
 }
@@ -17,21 +19,18 @@
 
 .scroller[data-animated="true"] {
   overflow: hidden;
-  -webkit-mask: linear-gradient(
-    90deg,
-    transparent,
-    white 20%,
-    white 80%,
-    transparent
-  );
+  -webkit-mask: linear-gradient(90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent);
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
 .scroller[data-animated="true"] .scroller__inner {
   width: max-content;
   flex-wrap: nowrap;
-  animation: scroll var(--_animation-duration, 40s)
-    var(--_animation-direction, forwards) linear infinite;
+  animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
 }
 
 .scroller[data-direction="right"] {
@@ -72,10 +71,14 @@
 /* general styles */
 
 :root {
-  --clr-neutral-100: white; /* Adjusted neutral color to match home section */
-  --clr-primary-100: hsl(205, 15%, 100%); /* Adjusted to white */
-  --clr-primary-400: hsl(210, 50%, 98%); /* Adjusted to a lighter shade */
-  --clr-primary-800: hsl(217, 24%, 89%); /* Adjusted to a lighter shade */
-  --clr-primary-900: hsl(0, 0%, 39%); /* Adjusted to a lighter shade */
+  --clr-neutral-100: white;
+  /* Adjusted neutral color to match home section */
+  --clr-primary-100: hsl(205, 15%, 100%);
+  /* Adjusted to white */
+  --clr-primary-400: hsl(210, 50%, 98%);
+  /* Adjusted to a lighter shade */
+  --clr-primary-800: hsl(217, 24%, 89%);
+  /* Adjusted to a lighter shade */
+  --clr-primary-900: hsl(0, 0%, 39%);
+  /* Adjusted to a lighter shade */
 }
-
