@@ -20,8 +20,9 @@ const comments = [
         clientComment: `Working with Abhilash has been a fantastic experience. His expertise in both front-end and back-end 
         development is evident in the seamless functionality of our project. He is responsive, collaborative, and dedicated
          to meeting project goals.`,
-        Likes: 15,
-        views: 28
+        liked: false,
+        views: 28,
+        saved: false
     },
     {
         username: "Sarah",
@@ -31,8 +32,9 @@ const comments = [
         clientComment: `Abhilash is a highly skilled developer who consistently delivers high-quality code. 
         His attention to detail and problem-solving abilities are exceptional. He communicates effectively and 
         is always willing to go the extra mile to ensure project success.`,
-        Likes: 16,
-        views: 27
+        liked: false,
+        views: 27,
+        saved: false
     },
     {
         username: "Emily",
@@ -42,8 +44,9 @@ const comments = [
         His ability to quickly grasp complex requirements and translate them into elegant solutions is impressive. 
         I would highly recommend him for any development project.`,
         date: "9:25 AM Oct 22, 2023",
-        Likes: 10,
-        views: 20
+        liked: false,
+        views: 20,
+        saved: false
     }
     // Add more comment objects as needed
 ];

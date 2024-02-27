@@ -2,27 +2,71 @@ import React, { useState } from 'react';
 import { FiHeart } from 'react-icons/fi';
 import { FcLike } from 'react-icons/fc';
 import { FaBookmark, FaRegBookmark, FaPaperPlane, FaRegPaperPlane, FaCommentAlt, FaRegCommentAlt } from 'react-icons/fa';
+import { ToastContainer, toast, Flip } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-function ClientReview({ username, name, image, date, clientComment, likes, views }) {
-    const [liked, setLiked] = useState(false);
-    const [saved, setSaved] = useState(false);
+function ClientReview({ username, name, image, date, clientComment, liked, views, onSave, index, saved, onLiked }) {
     const [shared, setShared] = useState(false);
     const [comment, setComment] = useState(false);
 
+    const showSuccess = (infoMessage) => {
+        toast.success(infoMessage, {
+            position: 'bottom-right',
+            style: {
+                bottom: '30px'// Adjust the distance from the bottom
+            },
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light"
+        });
+
+    }
+
+    const showInfo = (infoMessage) => {
+        toast.warn(infoMessage, {
+            position: 'bottom-right',
+            style: {
+                bottom: '30px'// Adjust the distance from the bottom
+            },
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light"
+        });
+    }
+
     const toggleLike = () => {
-        setLiked(!liked);
+        //setLiked(!likedstate);
+        onLiked(index, !liked);
     };
 
     const toggleSave = () => {
-        setSaved(!saved);
+        onSave(index, !saved); // Call onSave prop with the index of the comment
+        if (!saved) {
+            showSuccess('Comment saved successfully move to Top');
+        }
     };
 
     const toggleShare = () => {
         setShared(!shared);
+        if (!shared) {
+            showInfo('Please enter your details in the contact form.');
+        }
+
     };
 
     const toggleComment = () => {
         setComment(!comment);
+        if (!comment) {
+            showInfo('Please enter your message in the contact form.');
+        }
     };
 
     return (
