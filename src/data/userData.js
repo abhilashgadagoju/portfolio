@@ -16,7 +16,7 @@ const comments = [
         username: "David",
         name: "David Rodriguez",
         image: David,
-        date: "9:25 AM Oct 22, 2023",
+        date: "11:10 AM Nov 30, 2023",
         clientComment: `Working with Abhilash has been a fantastic experience. His expertise in both front-end and back-end 
         development is evident in the seamless functionality of our project. He is responsive, collaborative, and dedicated
          to meeting project goals.`,
@@ -28,7 +28,7 @@ const comments = [
         username: "Sarah",
         name: "Sarah Johnson",
         image: Sarah,
-        date: "9:25 AM Oct 22, 2023",
+        date: "3:45 PM Sep 14, 2023",
         clientComment: `Abhilash is a highly skilled developer who consistently delivers high-quality code. 
         His attention to detail and problem-solving abilities are exceptional. He communicates effectively and 
         is always willing to go the extra mile to ensure project success.`,
@@ -77,7 +77,7 @@ const skills = [
     }
 ]
 
-const experience = [
+/*const experience = [
     {
         "role": "Senior Java Full Stack Developer",
         "company": "SPS Commerce, MN",
@@ -97,6 +97,28 @@ const experience = [
         "role": "Java Full Stack Developer",
         "company": "KIOT Communication LLP, Hyderabad, India",
         "dates": "January 2017 – June 2018"
+    }
+];*/
+const experience = [
+    {
+        "role": "Senior Software Engineer",
+        "company": "Orange Data Cloud, TX, USA",
+        "dates": "March 2023 to Present"
+    },
+    {
+        "role": "Senior Java Developer",
+        "company": "Magnaquest Technologies, Hyderabad, India",
+        "dates": "July 2021 – March 2023"
+    },
+    {
+        "role": "Java Developer",
+        "company": "KIOT Communication, Hyderabad, India",
+        "dates": "Jun 2020 – July 2021"
+    },
+    {
+        "role": "Research Assistant",
+        "company": "University Of Hyderabad, Hyderabad, India",
+        "dates": "July 2019 – June 2021"
     }
 ];
 const Keywords = ['HTML', 'CSS', 'JS', 'React', 'SpringBoot', 'JPA', 'Hibernetes', 'Java', 'Microservices', 'Kafka', 'Kubernetes', 'AWS'];
