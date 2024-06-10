@@ -4,12 +4,12 @@ import Emily from './Emily.jpg';
 
 
 const contactInfo = {
-    "number": "+1 (832) 221-1196",
-    "email": "abhilashg716@gmail.com"
+    "number": "+91 9030587771",
+    "email": "abhilash.gaddagoju@gmail.com"
 };
 const roles = ['Full Stack Developer', 'Java Developer'];
 const greeting = `Hello 👋, I\'m Abhilash, A passionate Full Stack Developer with  Java, AWS, Kafka, 
-Spring Boot, Microservices, React based in USA📍`;
+Spring Boot, Microservices, React based in USA/India📍`;
 
 const comments = [
     {

@@ -1,7 +1,7 @@
 import React from 'react';
 import './HeaderBar.css';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
-import resumePdf from '../../data/Abhilash_FullStack_Developer.pdf';
+import resumePdf from '../../data/Resume_Abhilash.pdf';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';

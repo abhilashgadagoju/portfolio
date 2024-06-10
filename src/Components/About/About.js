@@ -20,11 +20,6 @@ function About() {
             </a>
             Inventory API using JAVA Spring Boot</li>
           <li>
-            <a href="https://github.com/abhilashgadagoju" target="_blank" rel="noopener noreferrer" className="my-link mx-2">
-              <FaGithub size={25} className="mx-2" />
-            </a>
-            Portfolio</li>
-          <li>
             <a href="https://github.com/abhilashgadagoju/Project" target="_blank" rel="noopener noreferrer" className="my-link mx-2">
               <FaGithub size={25} className="mx-2" />
             </a>
@@ -42,7 +37,7 @@ function About() {
         <ul style={{ textAlign: 'left' }}>
           <li>JAVA, C Certified</li>
           <li>Internship at ECIL</li>
-          <li>RedHat Certified Architecting Scalable Cloud Solutions</li>
+          <li>RedHat Certified Architecting Scalable Cloud</li>
           <li>AWS Cloud Practitioner</li>
         </ul>
       )
@@ -74,8 +69,14 @@ function About() {
             </div>
           </div>
           <div className="col-md-12 col-lg-4" >
-            <div className="container-fluid P-5 " style={{ border: 'none' }}>
+            <div className="container-fluid  " style={{ border: 'none' }}>
+
               <div className="row d-flex flex-wrap align-items-center justify-content-center">
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="abhilashgadagoju" data-version="v1">
+                  <a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/abhilashgadagoju?trk=profile-badge"></a>
+                </div>
+
+
                 {projects.map((project, index) => (
                   <ProjectCard
                     key={index}
@@ -83,6 +84,8 @@ function About() {
                     body={project.body}
                   />
                 ))}
+
+
               </div>
             </div>
           </div>
