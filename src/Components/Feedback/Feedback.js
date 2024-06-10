@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Feedback.css';
 import ClientReview from './ClientReview.js';
 import Contact from '../Contact/Contact.js';

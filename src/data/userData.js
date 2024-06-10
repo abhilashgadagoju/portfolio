@@ -13,6 +13,7 @@ Spring Boot, Microservices, React based in USA/India📍`;
 
 const comments = [
     {
+        id: 1,
         username: "David",
         name: "David Rodriguez",
         image: David,
@@ -25,6 +26,7 @@ const comments = [
         saved: false
     },
     {
+        id: 2,
         username: "Sarah",
         name: "Sarah Johnson",
         image: Sarah,
@@ -37,6 +39,7 @@ const comments = [
         saved: false
     },
     {
+        id: 3,
         username: "Emily",
         name: "Emily Chen",
         image: Emily,
@@ -45,10 +48,74 @@ const comments = [
         I would highly recommend him for any development project.`,
         date: "9:25 AM Oct 22, 2023",
         liked: false,
-        views: 20,
+        views: 12,
         saved: false
-    }
-    // Add more comment objects as needed
+    }/*,
+    {
+        id: 4,
+        username: "Smith",
+        name: "Jane Smith",
+        image: David,
+        clientComment: `Abhilash is a highly skilled developer who consistently delivers exceptional results. 
+        His ability to tackle complex problems with creativity and efficiency sets him apart. 
+        I wholeheartedly endorse him for any development project.`,
+        date: "2:10 PM Mar 5, 2023",
+        liked: false,
+        views: 11,
+        saved: false
+    },
+    {
+        id: 5,
+        username: "Mark",
+        name: "Mark Johnson",
+        image: Sarah,
+        clientComment: `Working with Abhilash was a pleasure. 
+        His expertise in coding and his dedication to delivering top-notch solutions make him stand out. 
+        I look forward to collaborating with him again in the future.`,
+        date: "10:30 AM Apr 18, 2024",
+        liked: false,
+        views: 17,
+        saved: false
+    },
+    {
+        id: 6,
+        username: "Lee",
+        name: "Sarah Lee",
+        image: Sarah,
+        clientComment: `Abhilash is an outstanding developer with a sharp mind and a strong work ethic. 
+        He consistently goes above and beyond to meet project requirements and exceed expectations. 
+        I highly recommend him without hesitation.`,
+        date: "3:55 PM Jun 22, 2024",
+        liked: false,
+        views: 16,
+        saved: false
+    },
+    {
+        id: 7,
+        username: "Michael",
+        name: "Michael Brown",
+        image: Sarah,
+        clientComment: `I've had the pleasure of working with Abhilash on multiple projects, and he never disappoints. 
+        His technical expertise and attention to detail ensure that every project is a success. 
+        I recommend him more highly.`,
+        date: "8:20 AM Aug 7, 2024",
+        liked: false,
+        views: 5,
+        saved: false
+    },
+    {
+        id: 8,
+        username: "Jennifer",
+        name: "Jennifer Kim",
+        image: Sarah,
+        clientComment: `Abhilash is simply phenomenal. 
+        His problem-solving skills and dedication to excellence make him an invaluable asset to any team. 
+        I feel fortunate to have had the opportunity to work with him.`,
+        date: "6:40 PM Sep 15, 2024",
+        liked: false,
+        views: 10,
+        saved: false
+    }*/
 ];
 
 
@@ -123,7 +190,7 @@ const experience = [
 ];
 const Keywords = ['HTML', 'CSS', 'JS', 'React', 'SpringBoot', 'JPA', 'Hibernetes', 'Java', 'Microservices', 'Kafka', 'Kubernetes', 'AWS'];
 const aboutMe = `Focused professional having excellent technical and communication skills, 
-and offering 6 years of experience in the Computer industry. Proficient at 
+and offering 4+ years of experience in the Computer industry. Proficient at 
 designing and formulating test automation frameworks, writing code in various 
 languages. feature development and implementation. Specialize in 
 thinking outside the box to find unique solutions to difficult engineering problems.`;
