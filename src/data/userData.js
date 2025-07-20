@@ -8,8 +8,7 @@ const contactInfo = {
     "email": "abhilash.gaddagoju@gmail.com"
 };
 const roles = ['Full Stack Developer', 'Java Developer'];
-const greeting = `Hello 👋, I\'m Abhilash, A passionate Full Stack Developer with  Java, AWS, Kafka, 
-Spring Boot, Microservices, React based in USA/India📍`;
+const greeting = "Hello 👋, I'm Abhilash, A passionate Full Stack Developer with  Java, AWS, Kafka, Spring Boot, Microservices, React based in USA/India📍";
 
 const comments = [
     {
@@ -43,9 +42,7 @@ const comments = [
         username: "Emily",
         name: "Emily Chen",
         image: Emily,
-        clientComment: `Abhilash is a reliable and talented developer who exceeded our expectations. 
-        His ability to quickly grasp complex requirements and translate them into elegant solutions is impressive. 
-        I would highly recommend him for any development project.`,
+        clientComment: `Abhilash is a reliable and talented developer who exceeded our expectations. His ability to quickly grasp complex requirements and translate them into elegant solutions is impressive. I would highly recommend him for any development project.`,
         date: "9:25 AM Oct 22, 2023",
         liked: false,
         views: 12,
@@ -189,11 +186,7 @@ const experience = [
     }
 ];
 const Keywords = ['HTML', 'CSS', 'JS', 'React', 'SpringBoot', 'JPA', 'Hibernetes', 'Java', 'Microservices', 'Kafka', 'Kubernetes', 'AWS'];
-const aboutMe = `Focused professional having excellent technical and communication skills, 
-and offering 4+ years of experience in the Computer industry. Proficient at 
-designing and formulating test automation frameworks, writing code in various 
-languages. feature development and implementation. Specialize in 
-thinking outside the box to find unique solutions to difficult engineering problems.`;
+const aboutMe = "Focused professional having excellent technical and communication skills, and offering 4+ years of experience in the Computer industry. Proficient at designing and formulating test automation frameworks, writing code in various languages. feature development and implementation. Specialize in thinking outside the box to find unique solutions to difficult engineering problems.";
 
 
 

@@ -54,8 +54,9 @@ function About({ theme }) {
     document.body.appendChild(script);
 
     // Cleanup function to remove script and badges on unmount
+    const badgeNode = badgeRef.current;
     return () => {
-      if (badgeRef.current) badgeRef.current.innerHTML = '';
+      if (badgeNode) badgeNode.innerHTML = '';
       const script = document.getElementById('linkedin-badge-script');
       if (script) script.remove();
     };
