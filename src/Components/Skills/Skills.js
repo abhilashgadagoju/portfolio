@@ -8,7 +8,7 @@ function Skills() {
 
 
     return (
-        <div className="card skills-section" style={{ border: 'none' }}>
+        <div className="card skills-section" style={{ border: 'none', background: 'var(--aboutme-bg)',color:'var(--text-color)' }}>
             <p className='title'>What Skills I Have</p>
             {skills.map((skill, index) => (
                 <div key={index}>

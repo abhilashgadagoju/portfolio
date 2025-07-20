@@ -63,7 +63,8 @@
 
 .tag-list li {
   padding: 1rem;
-  background: var(--clr-primary-400);
+  background: var(--bg-color);
+  color: var(--text-color);
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
 }
@@ -81,4 +82,8 @@
   /* Adjusted to a lighter shade */
   --clr-primary-900: hsl(0, 0%, 39%);
   /* Adjusted to a lighter shade */
+}
+.dark-mode {
+  --clr-primary-400: #23272b;
+  --clr-primary-900: 0 4px 16px rgba(20, 20, 20, 0.7), 0 1.5px 3px rgba(0,184,255,0.08);
 }

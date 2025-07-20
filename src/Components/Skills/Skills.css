@@ -5,7 +5,8 @@
   
   .highlight {
     display: inline;
-    background-color: #f0f0f0;
+    background: var(--keyword-bg);
+    color: var(--text-color);
     padding: 2px 4px;
     border-radius: 4px;
     font-family: 'Courier New', Courier, monospace;

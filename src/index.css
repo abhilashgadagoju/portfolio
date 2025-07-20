@@ -72,3 +72,39 @@ code {
   font-size: 18px;
   color: #666666;
 }
+
+:root {
+  --bg-color: #fff;
+  --text-color: #222;
+  --home-bg: #f0f0f0;
+  --aboutme-bg: #fff;
+  --keyword-bg:#f0f0f0;
+  --card-header-bg:#e9e5df;
+  --card-body-bg:#fff;
+  --card-bg: #f8f9fa;
+  --feedback-bg: #f0f0f0;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --client-review-bg: #fff;
+  --client-review-border: #e0e0e0;
+}
+
+.dark-mode {
+  --bg-color: #181818;
+  --text-color: #f8f9fa;
+  --home-bg: #23272b;
+  --aboutme-bg: #181818;
+  --keyword-bg:#23272b;
+  --card-header-bg:#38434f;
+  --card-body-bg:#000000;
+  --card-bg: #23272b;
+  --feedback-bg: #23272b;
+  --shadow: 0 4px 16px rgba(255,255,255,0.10);
+  --client-review-bg: #000000;
+  --client-review-border: #fff;
+}
+
+body, .App {
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+

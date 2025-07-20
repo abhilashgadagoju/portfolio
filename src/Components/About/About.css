@@ -1,12 +1,85 @@
 /* About.css */
 .about-section {
+    background: var(--aboutme-bg);
+    color: var(--text-color);
     padding: 40px;
-    
+    border-radius: 8px;
+    margin-bottom: 20px;
   }
 
   .me {
     color: #457032; /* Change the color of 'ME' */
     font-weight: bold;
+}
+
+/* LinkedIn Badge Display Control */
+.linkedin-badge-light {
+  display: block !important;
+}
+
+.linkedin-badge-dark {
+  display: none !important;
+}
+
+/* Dark mode - show dark badge, hide light badge */
+.dark-mode .linkedin-badge-light {
+  display: none !important;
+}
+
+.dark-mode .linkedin-badge-dark {
+  display: block !important;
+}
+
+/* Fix LinkedIn badge container scrolling issues */
+.badge-base {
+  overflow: hidden !important;
+  height: 339px !important;
+  width: 340px !important;
+  max-height: 339px !important;
+  max-width: 340px !important;
+}
+
+.LI-profile-badge {
+  overflow: hidden !important;
+  height: 339px !important;
+  width: 340px !important;
+  max-height: 339px !important;
+  max-width: 340px !important;
+}
+
+/* Ensure the badge container doesn't create scrollbars */
+[data-badge-container] {
+  overflow: hidden !important;
+  height: 340px !important;
+  width: 340px !important;
+  max-height: 340px !important;
+  max-width: 340px !important;
+}
+
+/* LinkedIn iframe styling */
+.LI-profile-badge iframe {
+  overflow: hidden !important;
+  height: 340px !important;
+  width: 340px !important;
+  max-height: 340px !important;
+  max-width: 340px !important;
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Hover effect for LinkedIn badge */
+.LI-profile-badge iframe:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Also add hover effect to the badge container for better interaction */
+.badge-base:hover,
+.LI-profile-badge:hover {
+  transform: translateY(-2px) !important;
+  transition: all 0.3s ease !important;
 }
 
   

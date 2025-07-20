@@ -6,7 +6,7 @@ import './HomeSection.css';
 import { useEffect, useState } from 'react';
 import { FaLinkedin, FaWhatsapp, FaEnvelope, FaGithub } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHtml5, faCss3, faJava, faReact, faAws } from '@fortawesome/free-brands-svg-icons';
+import { faJava, faReact, faAws } from '@fortawesome/free-brands-svg-icons';
 import Keywords from '../Keywords/Keywords';
 import { roles, greeting, contactInfo } from '../../data/userData'
 
@@ -79,7 +79,7 @@ const HomeSection = () => {
             <br /> <br />
             <p>{contactInfo.email} | {contactInfo.number}</p>
             <br /> <br />
-            <p style={{ 'font-weight': 'bold' }}>Tech Stack |
+            <p style={{ fontWeight: 'bold' }}>Tech Stack |
 
 
               <FontAwesomeIcon icon={faJava} size="2x" className="mx-2" />

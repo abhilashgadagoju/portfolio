@@ -62,19 +62,19 @@ function Contact() {
       message: form.current.message.value
     };
 
-    if (formData.name == '') {
+    if (formData.name === "") {
       showError('Please enter your name');
       form.current.recruiter_name.classList.add('error-border');
       return;
-    } else if (formData.phone == '' || formData.phone.length !== 10) {
+    } else if (formData.phone === "" || formData.phone.length !== 10) {
       showError('Please enter a valid phone number')
       form.current.recruiter_phone.classList.add('error-border');
       return;
-    } else if (formData.email == '' || !/\S+@\S+\.\S+/.test(formData.email)) {
+    } else if (formData.email === "" || !/\S+@\S+\.\S+/.test(formData.email)) {
       showError('Please enter a valid email address')
       form.current.recruiter_email.classList.add('error-border');
       return;
-    } else if (formData.message == '') {
+    } else if (formData.message === "") {
       showError('Please enter your message')
       form.current.message.classList.add('error-border');
       return;
@@ -88,12 +88,12 @@ function Contact() {
   return (
     <div className="row justify-content-center" id="contact">
       <div className="col-md-12 col-lg-12">
-        <Card  >
-          <Card.Header>
+        <Card className="contact-card">
+          <Card.Header style={{ background: 'var(--card-header-bg)', color:'var(--text-color)' }}>
             <Card.Title>Contact Me</Card.Title>
             <Card.Text>Enter your information and I'll get back to you.</Card.Text>
           </Card.Header>
-          <Card.Body>
+          <Card.Body style={{ background: 'var(--card-body-bg)', color:'var(--text-color)', textAlign: 'left' }}>
             <Form ref={form}>
               <Form.Group className="mb-3">
                 <Form.Label htmlFor="first-name">Full Name</Form.Label>
@@ -112,7 +112,7 @@ function Contact() {
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label htmlFor="message">Message</Form.Label>
-                <Form.Control as="textarea" id="message" name="message" rows={3} placeholder="Enter your message"
+                <Form.Control as="textarea" id="message" name="message" rows={5} placeholder="Enter your message"
                   className="highlight-on-focus" onChange={handleInputChange} required />
               </Form.Group>
               <Button bg="dark" variant="dark" onClick={handleSubmit}>

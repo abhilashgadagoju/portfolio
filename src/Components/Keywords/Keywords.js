@@ -2,10 +2,10 @@
 
 import React, { useEffect } from 'react';
 import './Keywords.css';
-import { Keywords } from '../../data/userData.js'
+import { Keywords as keywordsData } from '../../data/userData.js'
 
 
-function Projects() {
+function Keywords() {
 
 
   useEffect(() => {
@@ -43,7 +43,7 @@ function Projects() {
   return (
     <div className="scroller" data-speed="fast">
       <ul className="tag-list scroller__inner">
-        {Keywords.map((item, index) => (
+        {keywordsData.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
       </ul>
@@ -52,4 +52,4 @@ function Projects() {
 };
 
 
-export default Projects;
+export default Keywords;

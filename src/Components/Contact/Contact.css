@@ -1,11 +1,62 @@
+/* Contact form card styling */
+.contact-card {
+  border: 0px solid #e0e0e0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+  overflow: hidden !important;
+}
+
+.contact-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+  transform: translateY(-2px) !important;
+}
+
+.contact-card .card-header {
+  border-radius: 10px 10px 0 0 !important;
+  border-bottom: 0px solid #e0e0e0 !important;
+}
+
+.contact-card .card-body {
+  border-radius: 0 0 10px 10px !important;
+}
+
+/* Input field styling for light mode */
+.highlight-on-focus {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 0px solid #ced4da !important;
+}
+
 .highlight-on-focus:focus {
-  border-color: rgba(0, 0, 0, 0.5); /* Change the border color to black when focused */
-  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5); /* Add a black box shadow when focused */
+  border-color: var(--contact-border, rgba(0,0,0,0.5));
+  box-shadow: 0 0 0 0.2rem var(--contact-shadow, rgba(0,0,0,0.5));
+}
+
+/* Input field styling for dark mode */
+.dark-mode .highlight-on-focus {
+  background-color: #2d3748 !important;
+  color: #ffffff !important;
+  border: 1px solid #4a5568 !important;
+}
+
+.dark-mode .highlight-on-focus:focus {
+  border-color: var(--contact-border-dark, #f8f9fa);
+  box-shadow: 0 0 0 0.2rem var(--contact-shadow-dark, rgba(248,249,250,0.5));
+}
+
+/* Placeholder styling for dark mode */
+.dark-mode .highlight-on-focus::placeholder {
+  color: #a0aec0 !important;
 }
 
 .error-border {
-  border-color: red;
-  box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+  border-color: red !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25) !important;
+}
+.dark-mode .error-border {
+  border-color: #ff4d4f !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 77, 79, 0.25) !important;
 }
 
 .contact-description {

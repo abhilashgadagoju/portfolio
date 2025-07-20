@@ -10,7 +10,7 @@
 }
 
 .home-section {
-  background-color: #f0f0f0;
+  background: var(--home-bg);
   width: 100%;
   padding: 105px 50px 105px 50px;
 }
@@ -27,17 +27,16 @@
   margin: 0 auto;
   text-align: center;
   overflow: hidden;
-  /* Hide any content that overflows the container */
+  background: var(--home-bg);
+  color: var(--text-color);
   word-wrap: break-word;
-  /* Break long words and prevent them from overflowing */
   white-space: normal;
-  /* Allow text to wrap onto multiple lines */
 }
 
 .typing-text {
   font-size: 40px;
   font-weight: bold;
-  color: #333;
+  color: var(--text-color);
 }
 
 .profile-image img {
@@ -45,7 +44,7 @@
   width: 300px;
   height: 300px;
   margin: 20px 20px 20px 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow, 0 4px 8px rgba(0,0,0,0.1));
 }
 
 @media screen and (max-width: 760px) {
@@ -60,12 +59,14 @@
 
 .profile-info p {
   font-size: 18px;
-  color: #555;
+  color: var(--text-color);
+  background: var(--bg-color);
   margin-bottom: 10px;
 }
 
 .profile-info h6 {
   font-size: 20px;
-  color: #333;
+  color: var(--text-color);
+  background: var(--bg-color);
   margin-bottom: 20px;
 }

@@ -3,3 +3,7 @@
     font-size: 30px; /* Adjust the font size for the title */
     font-weight: bold;
   }
+footer, .navbar {
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}

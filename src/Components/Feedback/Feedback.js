@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Feedback.css';
 import ClientReview from './ClientReview.js';
 import Contact from '../Contact/Contact.js';
 import { comments } from '../../data/userData.js'
 
 const Feedback = () => {
-    console.log(comments);
 
     const [commentsList, setCommentsList] = useState(comments);
 
@@ -25,7 +24,6 @@ const Feedback = () => {
         setCommentsList(sortedComments);
     };
     const handleLikeComment = (index, liked) => {
-        console.log("handle liked ")
         // Create a new array with the updated comment
         const updatedCommentsList = commentsList.map((comment, i) => {
             if (i === index) {
@@ -37,7 +35,7 @@ const Feedback = () => {
     }
 
     return (
-        <div className="container-fluid Feedbacksection">
+        <div className="container-fluid Feedbacksection" style={{background:'var(--feedback-bg)'}}>
             <div className='row'>
                 <div className='col-md-8'>
                     {commentsList.map((comment, index) => (

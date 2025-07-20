@@ -5,8 +5,8 @@ import './Experience.css';
 function Experience() {
 
   return (
-    <div className="card experience-section" style={{ border: 'none' }}>
-      <p className='title'>Experience </p>
+    <div className="card experience-section" style={{ border: 'none', background: 'var(--aboutme-bg)',color:'var(--text-color)' }}>
+      <p className='title' >Experience </p>
       {experience.map((exp, index) => (
         <div key={index}>
           <p>
